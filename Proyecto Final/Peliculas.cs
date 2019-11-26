@@ -8,9 +8,7 @@ namespace Proyecto_Final
 {
     class Peliculas : Ambos
     {
-        public string tipo = "Pelicula";
-
-        public Peliculas(string titulo, string año, string productor, string genero, string descripcion, int rating)
+        public Peliculas(string titulo, int año, string productor, string genero, string descripcion, int rating)
         {
             Titulo = titulo;
             Año = año;
@@ -18,6 +16,7 @@ namespace Proyecto_Final
             Genero = genero;
             Descripcion = descripcion;
             Rating = rating;
+            Tipo = "Película";
         }
 
     }

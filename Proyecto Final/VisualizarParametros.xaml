@@ -22,11 +22,19 @@
         <TextBox x:Name="txtProductor" HorizontalAlignment="Left" Height="23" Margin="75,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
         <Label Content="Descripción:" FontSize="10" HorizontalAlignment="Left" Margin="11,240,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtDescripción" HorizontalAlignment="Left" Height="91" Margin="75,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410"/>
-        <Label Content="Rating:" FontSize="10" HorizontalAlignment="Left" Margin="11,212,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtRating" HorizontalAlignment="Left" Height="23" Margin="75,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="23"/>
+        <Label Name="lRating" Content="Rating:" Visibility="Hidden" FontSize="10" HorizontalAlignment="Left" Margin="11,212,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtRating" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="75,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="23"/>
         <Label Content="Visualizar elemento" FontSize="30" HorizontalAlignment="Left" Margin="117,15,0,0" VerticalAlignment="Top"/>
         <Label Content="Tipo:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
         <TextBlock Name="lClase" HorizontalAlignment="Left" Margin="51,75,0,0" TextWrapping="Wrap" Text="el tipo de clase" VerticalAlignment="Top"/>
+        <Image Name="Estrella0" Visibility="Hidden" Margin="307,178,50,143" Source="0.png" Stretch="Fill"/>
+        <Image Name="Estrella1" Visibility="Hidden" Margin="307,178,50,143" Source="1.png" Stretch="Fill"/>
+        <Image Name="Estrella2" Visibility="Hidden" Margin="307,178,50,143" Source="2.png" Stretch="Fill"/>
+        <Image Name="Estrella3" Visibility="Hidden" Margin="307,178,50,143" Source="3.png" Stretch="Fill"/>
+        <Image Name="Estrella4" Visibility="Hidden" Margin="307,178,50,143" Source="4.png" Stretch="Fill"/>
+        <Image Name="Estrella5" Visibility="Hidden" Margin="307,178,50,143" Source="5.png" Stretch="Fill"/>
+        <Label Name="lTemporada" Visibility="Hidden" Content="Temporadas:" HorizontalAlignment="Left" Margin="252,131,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtTemporadas" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="334,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
 
     </Grid>
 </UserControl>

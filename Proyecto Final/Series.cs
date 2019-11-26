@@ -8,11 +8,9 @@ namespace Proyecto_Final
 {
     class Series : Ambos
     {
-        public int Temporadas { get; set; }
 
-        public string tipo = "Serie";
 
-        public Series(string titulo, string año, string productor, string genero, int temporadas, string descripcion, int rating)
+        public Series(string titulo, int año, string productor, string genero, int temporadas, string descripcion, int rating)
         {
             Titulo = titulo;
             Año = año;
@@ -21,6 +19,7 @@ namespace Proyecto_Final
             Temporadas = temporadas;
             Descripcion = descripcion;
             Rating = rating;
+            Tipo = "Serie";
         }
 
     }

@@ -21,10 +21,11 @@
         <Button Name="btnOrdenarAscendienteTitulo" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="10,370,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Name="btnOrdenarDescendenteAño" Content="Año -/+" HorizontalAlignment="Left" Margin="125,345,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Name="btnOrdenarAscendienteAño" Content="Año +/-" HorizontalAlignment="Left" Margin="125,370,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Name="btnGuardar" Visibility="Visible" Content="Guardar" HorizontalAlignment="Left" Margin="220,375,0,0" VerticalAlignment="Top" Width="75" Click="BtnGuardar_Click"/>
+        <Button Name="btnGuardar" Visibility="Hidden" Content="Guardar" HorizontalAlignment="Left" Margin="220,375,0,0" VerticalAlignment="Top" Width="75" Click="BtnGuardar_Click"/>
         <Button Name="btnCancelar" Visibility="Hidden" Content="Cancelar" HorizontalAlignment="Left" Margin="300,375,0,0" VerticalAlignment="Top" Width="75" Click="BtnCancelar_Click"/>
-        <Button Name="btnEliminar" Content="Eliminar elemento" Visibility="Hidden" HorizontalAlignment="Left" Margin="380,375,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button Name="btnEliminar" Content="Eliminar elemento" Visibility="Hidden" HorizontalAlignment="Left" Margin="380,375,0,0" VerticalAlignment="Top" Width="110" Click="BtnEliminar_Click"/>
         <Button Name="btnEditar" Content="Editar elemento" Visibility="Hidden" HorizontalAlignment="Left" Margin="495,375,0,0" VerticalAlignment="Top" Width="95" Click="BtnEditar_Click"/>
+        <Button Name="btnActualizar" Content="Actualizar" Visibility="Hidden" HorizontalAlignment="Left" Margin="220,375,0,0" VerticalAlignment="Top" Width="75" Click="BtnActualizar_Click"/>
 
     </Grid>
 </Window>
