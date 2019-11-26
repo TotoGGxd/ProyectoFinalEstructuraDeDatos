@@ -8,11 +8,11 @@
         Title="Gestor de películas y series" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="btnAgregar" Content="Agregar elemento" HorizontalAlignment="Left" Margin="665,375,0,0" VerticalAlignment="Top" Width="105" Click="BtnAgregar_Click"/>
-        <ListView x:Name="lstElementos" HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="205">
+        <ListView x:Name="lstElementos" HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="205" SelectionChanged="LstElementos_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Nombre" Width="120"></GridViewColumn>
-                    <GridViewColumn Header="Año" Width="80"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Titulo}" Header="Nombre" Width="120"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Año}" Header="Año" Width="80"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -21,10 +21,10 @@
         <Button Name="btnOrdenarAscendienteTitulo" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="10,370,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Name="btnOrdenarDescendenteAño" Content="Año -/+" HorizontalAlignment="Left" Margin="125,345,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Name="btnOrdenarAscendienteAño" Content="Año +/-" HorizontalAlignment="Left" Margin="125,370,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Name="btnGuardar" Visibility="Hidden" Content="Agregar" HorizontalAlignment="Left" Margin="220,375,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="btnGuardar" Visibility="Visible" Content="Guardar" HorizontalAlignment="Left" Margin="220,375,0,0" VerticalAlignment="Top" Width="75" Click="BtnGuardar_Click"/>
         <Button Name="btnCancelar" Visibility="Hidden" Content="Cancelar" HorizontalAlignment="Left" Margin="300,375,0,0" VerticalAlignment="Top" Width="75" Click="BtnCancelar_Click"/>
-        <Button Content="Eliminar elemento" Visibility="Hidden" HorizontalAlignment="Left" Margin="380,375,0,0" VerticalAlignment="Top" Width="110"/>
-        <Button Content="Editar elemento" Visibility="Hidden" HorizontalAlignment="Left" Margin="495,375,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button Name="btnEliminar" Content="Eliminar elemento" Visibility="Hidden" HorizontalAlignment="Left" Margin="380,375,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button Name="btnEditar" Content="Editar elemento" Visibility="Hidden" HorizontalAlignment="Left" Margin="495,375,0,0" VerticalAlignment="Top" Width="95" Click="BtnEditar_Click"/>
 
     </Grid>
 </Window>

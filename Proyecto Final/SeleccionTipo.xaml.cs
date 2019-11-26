@@ -25,6 +25,7 @@ namespace Proyecto_Final
             InitializeComponent();
             rbtnPelícula.IsChecked = true;
             grdParametros.Children.Add(new ParametrosPelicula());
+
         }
 
         private void RbtnPelícula_Checked(object sender, RoutedEventArgs e)

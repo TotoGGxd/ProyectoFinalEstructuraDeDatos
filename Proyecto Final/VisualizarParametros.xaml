@@ -23,10 +23,10 @@
         <Label Content="Descripción:" FontSize="10" HorizontalAlignment="Left" Margin="11,240,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtDescripción" HorizontalAlignment="Left" Height="91" Margin="75,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410"/>
         <Label Content="Rating:" FontSize="10" HorizontalAlignment="Left" Margin="11,212,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="75,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="23"/>
+        <TextBox Name="txtRating" HorizontalAlignment="Left" Height="23" Margin="75,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="23"/>
         <Label Content="Visualizar elemento" FontSize="30" HorizontalAlignment="Left" Margin="117,15,0,0" VerticalAlignment="Top"/>
         <Label Content="Tipo:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="51,75,0,0" TextWrapping="Wrap" Text="el tipo de clase" VerticalAlignment="Top"/>
+        <TextBlock Name="lClase" HorizontalAlignment="Left" Margin="51,75,0,0" TextWrapping="Wrap" Text="el tipo de clase" VerticalAlignment="Top"/>
 
     </Grid>
 </UserControl>

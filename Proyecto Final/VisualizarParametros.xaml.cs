@@ -23,6 +23,8 @@ namespace Proyecto_Final
         public VisualizarParametros()
         {
             InitializeComponent();
+            
+
         }
     }
 }

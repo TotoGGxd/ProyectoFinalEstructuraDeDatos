@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Final
 {
-    class Series
+    class Series : Ambos
     {
-        public string Titulo { get; set; }
-        public string Año { get; set; }
-        public string Productor { get; set; }
-        public string Genero { get; set; }
         public int Temporadas { get; set; }
-        public string Descripcion { get; set; }
-        public int Rating { get; set; }
+
+        public string tipo = "Serie";
 
         public Series(string titulo, string año, string productor, string genero, int temporadas, string descripcion, int rating)
         {

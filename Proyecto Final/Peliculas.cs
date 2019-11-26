@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Final
 {
-    class Peliculas
+    class Peliculas : Ambos
     {
-        public string Titulo { get; set; }
-        public string Año { get; set; }
-        public string Productor { get; set; }
-        public string Genero { get; set; }
-        public string Descripcion { get; set; }
-        public int Rating { get; set; }
+        public string tipo = "Pelicula";
 
         public Peliculas(string titulo, string año, string productor, string genero, string descripcion, int rating)
         {
@@ -24,5 +19,6 @@ namespace Proyecto_Final
             Descripcion = descripcion;
             Rating = rating;
         }
+
     }
 }
