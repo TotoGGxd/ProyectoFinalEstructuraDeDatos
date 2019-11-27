@@ -11,7 +11,27 @@
         <Label Content="Tipo:" FontSize="15" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbtnPelícula" Content="Película" HorizontalAlignment="Left" Margin="57,56,0,0" VerticalAlignment="Top" Checked="RbtnPelícula_Checked"/>
         <RadioButton x:Name="rbtnSerie" Content="Serie" HorizontalAlignment="Left" Margin="123,56,0,0" VerticalAlignment="Top" Checked="RbtnSerie_Checked"/>
-        <Grid x:Name="grdParametros" HorizontalAlignment="Left" Height="258" VerticalAlignment="Top" Width="505" Margin="10,82,0,0"/>
-
+        
+        <!--#region Serie -->
+        <Label Name="lTitulo" Visibility="Visible" Content="Título:" FontSize="10" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="74,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="380"/>
+        <Label Content="Año:" FontSize="10" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAño" HorizontalAlignment="Left" Height="23" Margin="74,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Género:" FontSize="10" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cboxGenero" HorizontalAlignment="Left" Margin="74,165,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>Drama</ComboBoxItem>
+            <ComboBoxItem>Cómedia</ComboBoxItem>
+            <ComboBoxItem>Suspenso</ComboBoxItem>
+            <ComboBoxItem>Misterio</ComboBoxItem>
+        </ComboBox>
+        <Label Name="lProductorDirector" Content="Director:" FontSize="10" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtProductorDirector" Visibility="Visible" HorizontalAlignment="Left" Height="23" Margin="74,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <Label Name="lDescipcionSinopsis" Content="Sinópsis:" FontSize="10" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDescripcionSinopsis" Visibility="Visible" HorizontalAlignment="Left" Height="91" Margin="74,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410"/>
+        <Label Content="Rating:" FontSize="10" HorizontalAlignment="Left" Margin="10,192,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtRating" Visibility="Visible" HorizontalAlignment="Left" Height="23" Margin="74,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="23"/>
+        <Label Name="lTemporadas" Visibility="Hidden" Content="Temporadas:" HorizontalAlignment="Left" Margin="252,111,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtTemporadas" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="334,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <!--#endregion-->
     </Grid>
 </UserControl>

@@ -24,7 +24,9 @@
         <Label Content="Descripción:" FontSize="10" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtDescripción" HorizontalAlignment="Left" Height="91" Margin="74,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410"/>
         <Label Content="Rating:" FontSize="10" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="74,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="23"/>
+        <TextBox Name="txtRating" HorizontalAlignment="Left" Height="23" Margin="74,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="23"/>
+        <Label Content="Temporadas:" HorizontalAlignment="Left" Margin="252,40,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtTemporadas" HorizontalAlignment="Left" Height="23" Margin="334,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
 
     </Grid>
 </UserControl>

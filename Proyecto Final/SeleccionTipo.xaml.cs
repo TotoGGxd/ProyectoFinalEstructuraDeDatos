@@ -24,21 +24,31 @@ namespace Proyecto_Final
         {
             InitializeComponent();
             rbtnPelícula.IsChecked = true;
-            grdParametros.Children.Add(new ParametrosPelicula());
-
         }
 
         private void RbtnPelícula_Checked(object sender, RoutedEventArgs e)
         {
-            grdParametros.Children.Clear();
-            grdParametros.Children.Add(new ParametrosPelicula());
+            if(rbtnPelícula.IsChecked == true)
+            {
+                lProductorDirector.Content = "Director:";
+                lDescipcionSinopsis.Content = "Sinópsis:";
+                lTemporadas.Visibility = Visibility.Hidden;
+                txtTemporadas.Visibility = Visibility.Hidden;
+
+            }
         }
 
         private void RbtnSerie_Checked(object sender, RoutedEventArgs e)
         {
-            grdParametros.Children.Clear();
-            grdParametros.Children.Add(new ParametrosSerie());
+            if(rbtnSerie.IsChecked == true)
+            {
+                lProductorDirector.Content = "Productor:";
+                lDescipcionSinopsis.Content = "Descipción:";
+                lTemporadas.Visibility = Visibility.Visible;
+                txtTemporadas.Visibility = Visibility.Visible;
 
+
+            }
         }
     }
 }

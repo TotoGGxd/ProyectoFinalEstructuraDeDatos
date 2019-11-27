@@ -56,9 +56,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Ambos.cs" />
-    <Compile Include="Parametros.xaml.cs">
-      <DependentUpon>Parametros.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ParametrosPelicula.xaml.cs">
       <DependentUpon>ParametrosPelicula.xaml</DependentUpon>
     </Compile>
@@ -84,10 +81,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Parametros.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ParametrosPelicula.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
