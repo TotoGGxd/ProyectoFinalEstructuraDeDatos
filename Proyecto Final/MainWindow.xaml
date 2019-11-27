@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_Final"
         mc:Ignorable="d"
-        Title="Gestor de películas y series" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Gestor de base de datos" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Button x:Name="btnAgregar" Content="Agregar elemento" HorizontalAlignment="Left" Margin="665,375,0,0" VerticalAlignment="Top" Width="105" Click="BtnAgregar_Click"/>
         <ListView x:Name="lstElementos" HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="205" SelectionChanged="LstElementos_SelectionChanged">

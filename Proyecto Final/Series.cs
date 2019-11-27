@@ -8,8 +8,6 @@ namespace Proyecto_Final
 {
     class Series : Ambos
     {
-
-
         public Series(string titulo, int año, string productor, string genero, int temporadas, string descripcion, int rating)
         {
             Titulo = titulo;

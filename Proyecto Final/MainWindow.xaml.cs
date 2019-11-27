@@ -58,6 +58,7 @@ namespace Proyecto_Final
             btnGuardar.Visibility = Visibility.Hidden;
             btnEditar.Visibility = Visibility.Hidden;
             btnEliminar.Visibility = Visibility.Hidden;
+            btnActualizar.Visibility = Visibility.Hidden;
         }
 
         private void LstElementos_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -76,6 +77,7 @@ namespace Proyecto_Final
                 btnCancelar.Visibility = Visibility.Visible;
                 btnEliminar.Visibility = Visibility.Visible;
                 btnActualizar.Visibility = Visibility.Hidden;
+                btnGuardar.Visibility = Visibility.Hidden;
 
                 var z = ((VisualizarParametros)(grdElementos.Children[0]));
                 var y = ambos[lstElementos.SelectedIndex];
