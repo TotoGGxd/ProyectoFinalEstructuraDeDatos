@@ -195,6 +195,17 @@ namespace Proyecto_Final
                 ambos.Add(new Series(z.txtTitulo.Text, Convert.ToInt32(z.txtAño.Text), z.txtProductorDirector.Text, z.cboxGenero.Text, Convert.ToInt32(z.txtTemporadas.Text) ,z.txtDescripcionSinopsis.Text, Convert.ToInt32(z.txtRating.Text)));
             }
 
+            btnAgregar.Visibility = Visibility.Visible;
+            btnOrdenarAscendienteAño.Visibility = Visibility.Visible;
+            btnOrdenarAscendienteTitulo.Visibility = Visibility.Visible;
+            btnOrdenarDescendenteAño.Visibility = Visibility.Visible;
+            btnOrdenarDescendenteTitulo.Visibility = Visibility.Visible;
+            btnCancelar.Visibility = Visibility.Hidden;
+            btnGuardar.Visibility = Visibility.Hidden;
+            btnEditar.Visibility = Visibility.Hidden;
+            btnEliminar.Visibility = Visibility.Hidden;
+
+            grdElementos.Children.Clear();
         }
 
         private void BtnActualizar_Click(object sender, RoutedEventArgs e)
@@ -242,6 +253,83 @@ namespace Proyecto_Final
             btnEditar.Visibility = Visibility.Hidden;
             btnEliminar.Visibility = Visibility.Hidden;
 
+        }
+
+        private void BtnOrdenarDescendenteTitulo_Click(object sender, RoutedEventArgs e)
+        {
+            bool cambio;
+            do
+            {
+                cambio = false;
+                for (int i = 0; i < (ambos.Count - 1); i++)
+                {
+                    if (string.Compare(ambos[i].Titulo, ambos[i + 1].Titulo) > 0)
+                    {
+                        var temp = ambos[i];
+                        ambos[i] = ambos[i + 1];
+                        ambos[i + 1] = temp;
+                        cambio = true;
+                    }
+                }
+            } while (cambio == true);
+        }
+
+        private void BtnOrdenarAscendienteTitulo_Click(object sender, RoutedEventArgs e)
+        {
+            bool cambio;
+            do
+            {
+                cambio = false;
+                for (int i = 0; i < (ambos.Count - 1); i++)
+                {
+                    if (string.Compare(ambos[i].Titulo, ambos[i + 1].Titulo) < 0)
+                    {
+                        var temp = ambos[i];
+                        ambos[i] = ambos[i + 1];
+                        ambos[i + 1] = temp;
+                        cambio = true;
+                    }
+                }
+            } while (cambio == true);
+
+        }
+
+        private void BtnOrdenarDescendenteAño_Click(object sender, RoutedEventArgs e)
+        {
+            bool intercambio = false;
+            do
+            {
+                intercambio = false;
+                for (int i = 0; i < ambos.Count - 1; i++)
+                {
+                    if (ambos[i].Año > ambos[i + 1].Año)
+                    {
+                        var temp = ambos[i];
+                        ambos[i] = ambos[i + 1];
+                        ambos[i + 1] = temp;
+                        intercambio = true;
+                    }
+                }
+            } while (intercambio);
+        }
+
+        private void BtnOrdenarAscendienteAño_Click(object sender, RoutedEventArgs e)
+        {
+            bool intercambio = false;
+            do
+            {
+                intercambio = false;
+                for (int i = 0; i < ambos.Count - 1; i++)
+                {
+                    if (ambos[i].Año < ambos[i + 1].Año)
+                    {
+                        var temp = ambos[i];
+                        ambos[i] = ambos[i + 1];
+                        ambos[i + 1] = temp;
+                        intercambio = true;
+                    }
+                }
+            } while (intercambio);
         }
     }
 
