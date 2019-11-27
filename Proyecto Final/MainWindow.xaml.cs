@@ -21,7 +21,7 @@ namespace Proyecto_Final
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCollection<Ambos> ambos = new ObservableCollection<Ambos>();
+         ObservableCollection<Ambos> ambos = new ObservableCollection<Ambos>();
 
         public MainWindow()
         {
@@ -191,7 +191,7 @@ namespace Proyecto_Final
             
             if(z.rbtnPelícula.IsChecked == true)
             {
-                if (z.txtTitulo.Text == string.Empty || z.txtAño.Text == null || z.txtProductorDirector.Text == string.Empty || z.cboxGenero.Text == string.Empty || z.txtDescripcionSinopsis.Text == string.Empty || z.txtRating.Text == string.Empty)
+                if (z.txtTitulo.Text == string.Empty || z.txtAño.Text == string.Empty || z.txtProductorDirector.Text == string.Empty || z.cboxGenero.Text == string.Empty || z.txtDescripcionSinopsis.Text == string.Empty || z.txtRating.Text == string.Empty)
                 {
                     z.lAdvertencia.Visibility = Visibility.Visible;
                 }
@@ -215,7 +215,7 @@ namespace Proyecto_Final
             }
             if (z.rbtnSerie.IsChecked == true)
             {
-                if (z.txtTitulo.Text == string.Empty || z.txtAño.Text == null || z.txtProductorDirector.Text == string.Empty || z.cboxGenero.Text == string.Empty|| z.txtTemporadas.Text == string.Empty || z.txtDescripcionSinopsis.Text == string.Empty || z.txtRating.Text == string.Empty)
+                if (z.txtTitulo.Text == string.Empty || z.txtAño.Text == string.Empty || z.txtProductorDirector.Text == string.Empty || z.cboxGenero.Text == string.Empty|| z.txtTemporadas.Text == string.Empty || z.txtDescripcionSinopsis.Text == string.Empty || z.txtRating.Text == string.Empty)
                 {
                     z.lAdvertencia.Visibility = Visibility.Visible;
                 }
@@ -248,11 +248,11 @@ namespace Proyecto_Final
             var z = ((VisualizarParametros)(grdElementos.Children[0]));
             var y = ambos[lstElementos.SelectedIndex];
 
-            if (z.txtNombre.Text == string.Empty || z.txtAño.Text == null || z.txtProductor.Text == string.Empty || z.cboxGenero.Text == string.Empty || z.txtDescripción.Text == string.Empty || z.txtRating.Text == string.Empty && y.Tipo == "Película")
+            if (z.txtNombre.Text == string.Empty || z.txtAño.Text == string.Empty || z.txtProductor.Text == string.Empty || z.cboxGenero.Text == string.Empty || z.txtDescripción.Text == string.Empty || z.txtRating.Text == string.Empty && y.Tipo == "Película")
             {
                 z.lAdvertecia.Visibility = Visibility.Visible;
             }
-            if(z.txtNombre.Text == string.Empty || z.txtAño.Text == null || z.txtProductor.Text == string.Empty || z.cboxGenero.Text == string.Empty || z.txtDescripción.Text == string.Empty || z.txtRating.Text == string.Empty && y.Tipo == "Serie")
+            if(z.txtNombre.Text == string.Empty || z.txtAño.Text == string.Empty || z.txtProductor.Text == string.Empty || z.cboxGenero.Text == string.Empty || z.txtDescripción.Text == string.Empty || z.txtRating.Text == string.Empty && y.Tipo == "Serie")
             {
                 z.lAdvertecia.Visibility = Visibility.Visible;
             }
