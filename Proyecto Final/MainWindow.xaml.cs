@@ -187,27 +187,60 @@ namespace Proyecto_Final
         private void BtnGuardar_Click(object sender, RoutedEventArgs e)
         {
             var z = ((SeleccionTipo)(grdElementos.Children[0]));
-
+             
+            
             if(z.rbtnPelícula.IsChecked == true)
             {
-                ambos.Add(new Peliculas(z.txtTitulo.Text, Convert.ToInt32(z.txtAño.Text), z.txtProductorDirector.Text, z.cboxGenero.Text, z.txtDescripcionSinopsis.Text, Convert.ToInt32(z.txtRating.Text)));
+                if (z.txtTitulo.Text == string.Empty || z.txtAño.Text == null || z.txtProductorDirector.Text == string.Empty || z.cboxGenero.Text == string.Empty || z.txtDescripcionSinopsis.Text == string.Empty || z.txtRating.Text == string.Empty)
+                {
+                    z.lAdvertencia.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ambos.Add(new Peliculas(z.txtTitulo.Text, Convert.ToInt32(z.txtAño.Text), z.txtProductorDirector.Text, z.cboxGenero.Text, z.txtDescripcionSinopsis.Text, Convert.ToInt32(z.txtRating.Text)));
+
+                    btnAgregar.Visibility = Visibility.Visible;
+                    btnOrdenarAscendienteAño.Visibility = Visibility.Visible;
+                    btnOrdenarAscendienteTitulo.Visibility = Visibility.Visible;
+                    btnOrdenarDescendenteAño.Visibility = Visibility.Visible;
+                    btnOrdenarDescendenteTitulo.Visibility = Visibility.Visible;
+                    btnCancelar.Visibility = Visibility.Hidden;
+                    btnGuardar.Visibility = Visibility.Hidden;
+                    btnEditar.Visibility = Visibility.Hidden;
+                    btnEliminar.Visibility = Visibility.Hidden;
+
+                    grdElementos.Children.Clear();
+
+                }
             }
             if (z.rbtnSerie.IsChecked == true)
             {
-                ambos.Add(new Series(z.txtTitulo.Text, Convert.ToInt32(z.txtAño.Text), z.txtProductorDirector.Text, z.cboxGenero.Text, Convert.ToInt32(z.txtTemporadas.Text) ,z.txtDescripcionSinopsis.Text, Convert.ToInt32(z.txtRating.Text)));
+                if (z.txtTitulo.Text == string.Empty || z.txtAño.Text == null || z.txtProductorDirector.Text == string.Empty || z.cboxGenero.Text == string.Empty|| z.txtTemporadas.Text == string.Empty || z.txtDescripcionSinopsis.Text == string.Empty || z.txtRating.Text == string.Empty)
+                {
+                    z.lAdvertencia.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ambos.Add(new Series(z.txtTitulo.Text, Convert.ToInt32(z.txtAño.Text), z.txtProductorDirector.Text, z.cboxGenero.Text, Convert.ToInt32(z.txtTemporadas.Text), z.txtDescripcionSinopsis.Text, Convert.ToInt32(z.txtRating.Text)));
+
+                    z.lAdvertencia.Visibility = Visibility.Hidden;
+
+
+                    btnAgregar.Visibility = Visibility.Visible;
+                    btnOrdenarAscendienteAño.Visibility = Visibility.Visible;
+                    btnOrdenarAscendienteTitulo.Visibility = Visibility.Visible;
+                    btnOrdenarDescendenteAño.Visibility = Visibility.Visible;
+                    btnOrdenarDescendenteTitulo.Visibility = Visibility.Visible;
+                    btnCancelar.Visibility = Visibility.Hidden;
+                    btnGuardar.Visibility = Visibility.Hidden;
+                    btnEditar.Visibility = Visibility.Hidden;
+                    btnEliminar.Visibility = Visibility.Hidden;
+
+                    grdElementos.Children.Clear();
+
+                }
             }
 
-            btnAgregar.Visibility = Visibility.Visible;
-            btnOrdenarAscendienteAño.Visibility = Visibility.Visible;
-            btnOrdenarAscendienteTitulo.Visibility = Visibility.Visible;
-            btnOrdenarDescendenteAño.Visibility = Visibility.Visible;
-            btnOrdenarDescendenteTitulo.Visibility = Visibility.Visible;
-            btnCancelar.Visibility = Visibility.Hidden;
-            btnGuardar.Visibility = Visibility.Hidden;
-            btnEditar.Visibility = Visibility.Hidden;
-            btnEliminar.Visibility = Visibility.Hidden;
-
-            grdElementos.Children.Clear();
         }
 
         private void BtnActualizar_Click(object sender, RoutedEventArgs e)
@@ -215,24 +248,37 @@ namespace Proyecto_Final
             var z = ((VisualizarParametros)(grdElementos.Children[0]));
             var y = ambos[lstElementos.SelectedIndex];
 
-            y.Titulo = z.txtNombre.Text;
-            y.Año = Convert.ToInt32(z.txtAño.Text);
-            y.Productor = z.txtProductor.Text;
-            y.Genero = z.cboxGenero.Text;
-            y.Descripcion = z.txtDescripción.Text;
-            y.Rating = Convert.ToInt32(z.txtRating.Text);
-            lstElementos.Items.Refresh();
+            if (z.txtNombre.Text == string.Empty || z.txtAño.Text == null || z.txtProductor.Text == string.Empty || z.cboxGenero.Text == string.Empty || z.txtDescripción.Text == string.Empty || z.txtRating.Text == string.Empty && y.Tipo == "Película")
+            {
+                z.lAdvertecia.Visibility = Visibility.Visible;
+            }
+            if(z.txtNombre.Text == string.Empty || z.txtAño.Text == null || z.txtProductor.Text == string.Empty || z.cboxGenero.Text == string.Empty || z.txtDescripción.Text == string.Empty || z.txtRating.Text == string.Empty && y.Tipo == "Serie")
+            {
+                z.lAdvertecia.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                y.Titulo = z.txtNombre.Text;
+                y.Año = Convert.ToInt32(z.txtAño.Text);
+                y.Productor = z.txtProductor.Text;
+                y.Genero = z.cboxGenero.Text;
+                y.Descripcion = z.txtDescripción.Text;
+                y.Rating = Convert.ToInt32(z.txtRating.Text);
+                lstElementos.Items.Refresh();
 
-            z.txtNombre.IsEnabled = false;
-            z.txtAño.IsEnabled = false;
-            z.txtProductor.IsEnabled = false;
-            z.cboxGenero.IsEnabled = false;
-            z.txtDescripción.IsEnabled = false;
-            z.txtTemporadas.IsEnabled = false;
-            z.txtRating.IsEnabled = false;
+                z.txtNombre.IsEnabled = false;
+                z.txtAño.IsEnabled = false;
+                z.txtProductor.IsEnabled = false;
+                z.cboxGenero.IsEnabled = false;
+                z.txtDescripción.IsEnabled = false;
+                z.txtTemporadas.IsEnabled = false;
+                z.txtRating.IsEnabled = false;
 
-            btnActualizar.Visibility = Visibility.Hidden;
-            btnEditar.Visibility = Visibility.Visible;
+                btnActualizar.Visibility = Visibility.Hidden;
+                btnEditar.Visibility = Visibility.Visible;
+
+            }
+
         }
 
         private void BtnEliminar_Click(object sender, RoutedEventArgs e)
